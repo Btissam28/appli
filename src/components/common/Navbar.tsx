@@ -7,16 +7,16 @@ const Navbar: React.FC = () => {
   const { isAuthenticated, user, logout } = useAuth();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-  
+
   const navLinks = [
     { name: 'Home', path: '/', icon: <MapPin className="w-5 h-5" /> },
     { name: 'History', path: '/history', icon: <Clock className="w-5 h-5" /> },
     { name: 'Profile', path: '/profile', icon: <User className="w-5 h-5" /> },
   ];
-  
+
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
-  
+
   return (
     <nav className="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,10 +24,10 @@ const Navbar: React.FC = () => {
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
               <Zap className="h-8 w-8 text-blue-600" />
-              <span className="ml-2 text-xl font-bold text-gray-900">Bolt</span>
+              <span className="ml-2 text-xl font-bold text-gray-900">Location Detector</span>
             </Link>
           </div>
-          
+
           {/* Desktop menu */}
           <div className="hidden md:flex md:items-center md:space-x-4">
             {isAuthenticated ? (
@@ -37,17 +37,16 @@ const Navbar: React.FC = () => {
                     <Link
                       key={link.path}
                       to={link.path}
-                      className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                        location.pathname === link.path
+                      className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${location.pathname === link.path
                           ? 'bg-blue-50 text-blue-700'
                           : 'text-gray-700 hover:bg-gray-50'
-                      }`}
+                        }`}
                     >
                       {link.name}
                     </Link>
                   ))}
                 </div>
-                
+
                 <div className="ml-4 flex items-center">
                   <button
                     onClick={logout}
@@ -75,7 +74,7 @@ const Navbar: React.FC = () => {
               </div>
             )}
           </div>
-          
+
           {/* Mobile menu button */}
           <div className="flex md:hidden">
             <button
@@ -91,7 +90,7 @@ const Navbar: React.FC = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Mobile menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200">
@@ -113,23 +112,22 @@ const Navbar: React.FC = () => {
                     </div>
                   </div>
                 )}
-                
+
                 {navLinks.map((link) => (
                   <Link
                     key={link.path}
                     to={link.path}
-                    className={`flex items-center px-3 py-2 rounded-md text-base font-medium ${
-                      location.pathname === link.path
+                    className={`flex items-center px-3 py-2 rounded-md text-base font-medium ${location.pathname === link.path
                         ? 'bg-blue-50 text-blue-700'
                         : 'text-gray-700 hover:bg-gray-50'
-                    }`}
+                      }`}
                     onClick={closeMenu}
                   >
                     {link.icon}
                     <span className="ml-3">{link.name}</span>
                   </Link>
                 ))}
-                
+
                 <button
                   onClick={() => {
                     logout();
