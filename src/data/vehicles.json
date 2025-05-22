@@ -1,0 +1,84 @@
+{
+  "vehicles": [
+    {
+      "id": "car-1",
+      "type": "car",
+      "model": "Tesla Model 3",
+      "licensePlate": "ABC123",
+      "pricePerMinute": 0.5,
+      "pricePerKm": 0.25,
+      "batteryLevel": 80,
+      "range": 320,
+      "latitude": 37.7749,
+      "longitude": -122.4194,
+      "isAvailable": true,
+      "imageUrl": "https://images.pexels.com/photos/13871539/pexels-photo-13871539.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "car-2",
+      "type": "car",
+      "model": "BMW i3",
+      "licensePlate": "XYZ789",
+      "pricePerMinute": 0.45,
+      "pricePerKm": 0.22,
+      "batteryLevel": 65,
+      "range": 240,
+      "latitude": 37.7833,
+      "longitude": -122.4167,
+      "isAvailable": true,
+      "imageUrl": "https://images.pexels.com/photos/17072524/pexels-photo-17072524/free-photo-of-bmw-i4-electric-car.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "scooter-1",
+      "type": "scooter",
+      "model": "Segway Ninebot",
+      "pricePerMinute": 0.25,
+      "pricePerKm": 0.15,
+      "batteryLevel": 90,
+      "range": 30,
+      "latitude": 37.7855,
+      "longitude": -122.4057,
+      "isAvailable": true,
+      "imageUrl": "https://images.pexels.com/photos/8079876/pexels-photo-8079876.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "scooter-2",
+      "type": "scooter",
+      "model": "Xiaomi M365",
+      "pricePerMinute": 0.20,
+      "pricePerKm": 0.12,
+      "batteryLevel": 75,
+      "range": 25,
+      "latitude": 37.7922,
+      "longitude": -122.3987,
+      "isAvailable": true,
+      "imageUrl": "https://images.pexels.com/photos/7886806/pexels-photo-7886806.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "bike-1",
+      "type": "bike",
+      "model": "Trek FX 3",
+      "pricePerMinute": 0.15,
+      "pricePerKm": 0.08,
+      "batteryLevel": 100,
+      "range": 50,
+      "latitude": 37.7899,
+      "longitude": -122.4021,
+      "isAvailable": true,
+      "imageUrl": "https://images.pexels.com/photos/951324/pexels-photo-951324.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "bike-2",
+      "type": "bike",
+      "model": "Specialized Turbo",
+      "pricePerMinute": 0.18,
+      "pricePerKm": 0.10,
+      "batteryLevel": 85,
+      "range": 60,
+      "latitude": 37.7876,
+      "longitude": -122.4117,
+      "isAvailable": true,
+      "imageUrl": "https://images.pexels.com/photos/16177404/pexels-photo-16177404/free-photo-of-a-bicycle-parked-in-front-of-a-building.jpeg?auto=compress&cs=tinysrgb&w=600"
+    }
+  ]
+}
